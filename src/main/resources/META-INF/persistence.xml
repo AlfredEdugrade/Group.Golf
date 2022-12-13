@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0">
+    <persistence-unit name="hibernate" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>golf.golf_group.Country</class>
+        <class>golf.golf_group.PostalAddress</class>
+        <class>golf.golf_group.Address</class>
+        <class>golf.golf_group.Person</class>
+        <class>golf.golf_group.Employee</class>
+        <class>golf.golf_group.Game</class>
+        <class>golf.golf_group.Team</class>
+        <class>golf.golf_group.Player</class>
+        <class>golf.golf_group.MatchUp1V1 </class>
+        <class>golf.golf_group.MatchUpTVT</class>
+
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/piper_games_db?serverTimezone=UTC"/>
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.password" value="golf"/>
+            <property name="hibernate.show_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+</persistence>
